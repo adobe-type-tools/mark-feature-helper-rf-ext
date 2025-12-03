@@ -1,0 +1,13 @@
+name: Mark Feature Helper
+developer: Adobe Type Tools
+developerURL: https://github.com/adobe-type-tools
+launchAtStartUp: false
+mainScript: markFeatureHelper.py
+version: '1.0'
+addToMenu:
+- path: markFeatureHelper.py
+  preferredName: Mark Feature Helper
+  shortKey: ''
+html: false
+requiresVersionMajor: '4'
+requiresVersionMinor: 4b

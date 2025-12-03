@@ -1,0 +1,9 @@
+lookup MKMK_MARK_above {
+	lookupflag MarkAttachmentType @MC_above;
+
+	pos mark gravecmb <anchor 0 725> mark @MC_above;
+	pos mark acutecmb <anchor 0 725> mark @MC_above;
+	pos mark gravecmb.cap <anchor 0 864> mark @MC_above;
+	pos mark acutecmb.cap <anchor 0 864> mark @MC_above;
+} MKMK_MARK_above;
+

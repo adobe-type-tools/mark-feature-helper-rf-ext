@@ -1,0 +1,21 @@
+languagesystem DFLT dflt;
+languagesystem latn dflt;
+
+
+include(GSUB.fea);
+
+feature mark {
+	include(mark.fea);
+} mark;
+
+feature mkmk {
+	include(mkmk.fea);
+} mkmk;
+
+feature kern {
+	lookup KRN {
+		lookupflag IgnoreMarks;
+		include(kern.fea);
+	} KRN;
+} kern;
+

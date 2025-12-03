@@ -1,0 +1,20 @@
+@CAPS = [ A B C D E F G H I J K L M N O P Q R S T U V W X Y Z ];
+@LC_ASCENDING = [ b d f h k l ];
+
+@MARKS_ABOVE = [ gravecmb acutecmb circumflexcmb tildecmb macroncmb brevecmb dotaccentcmb dieresiscmb ringcmb hungarumlautcmb caroncmb hoicmb ];
+@MARKS_ABOVE_CAP = [ gravecmb.cap acutecmb.cap circumflexcmb.cap tildecmb.cap macroncmb.cap brevecmb.cap dotaccentcmb.cap dieresiscmb.cap ringcmb.cap hungarumlautcmb.cap caroncmb.cap hoicmb.cap  ];
+
+@MARKS_BELOW = [ commabelowcmb cedillacmb ogonekcmb verticallinebelowcmb brevebelowcmb dieresisbelowcmb dotbelowcmb macronbelowcmb ];
+
+
+feature ccmp {
+
+	lookup CAP_ACCENTS_SWAP {
+	    # substitutes combining marks for minuscules with forms for uppercase
+	    sub [ @CAPS @LC_ASCENDING ] @MARKS_ABOVE' by @MARKS_ABOVE_CAP;
+	    # sub [ @UC_ALL @LC_ASCENDING_ALL ] @MARKS_BELOW @MARKS_ABOVE' by @MARKS_ABOVE_CAP;
+	    sub @MARKS_ABOVE_CAP @MARKS_ABOVE' by @MARKS_ABOVE_CAP;
+	    # sub @MARKS_ABOVE_CAP @MARKS_BELOW @MARKS_ABOVE' by @MARKS_ABOVE_CAP;
+	} CAP_ACCENTS_SWAP;
+
+} ccmp;
