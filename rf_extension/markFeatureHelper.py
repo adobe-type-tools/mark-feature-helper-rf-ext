@@ -1,3 +1,10 @@
+# Copyright 2025 Adobe
+# All Rights Reserved.
+
+# NOTICE: Adobe permits you to use, modify, and distribute this file in
+# accordance with the terms of the Adobe license agreement accompanying
+# it.
+
 import ezui
 import importlib
 from AppKit import NSPredicate
@@ -19,7 +26,9 @@ def make_query(glyph_list):
 
 
 def unset_filter():
-    CurrentFontWindow().getGlyphCollection().setQuery(None)
+    cfw = CurrentFontWindow()
+    if cfw:
+        cfw.getGlyphCollection().setQuery(None)
 
 
 def find_cmb_marks(f):
@@ -160,9 +169,11 @@ class MarkController(Subscriber, ezui.WindowController):
 
     def button_build_grp_selCallback(self, sender):
         selection = self.font.selectedGlyphNames
-        self.font.groups['COMBINING_MARKS'] = selection
-        self.w.getItem('button_write_fea').enable(1)
-        self.w.getItem('button_show_grp_existing').enable(1)
+        if selection is not []:
+            self.font.groups['COMBINING_MARKS'] = selection
+            self.w.getItem('button_write_fea').enable(1)
+            self.w.getItem('button_show_grp_existing').enable(1)
+        self.update(sender.get('font'))
 
     def button_build_grp_autoCallback(self, sender):
         auto_group = find_cmb_marks(self.font)
