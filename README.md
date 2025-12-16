@@ -29,6 +29,11 @@ There are two requirements for writing a mark feature:
 _This is not in the scope of this tool.
 There have been many attempts at automating anchor placement, and most likely your UFO already has anchors. If it doesn’t, check Mechanic for the approach you like best._
 
+Some good extensions to help you here are:
+* [RoboFont Mark Positioning Tool by Bahman Eslami](https://gitlab.com/typoman/robofont-mark-tool)
+* [Anchor Dropper by Ryan Bugden](https://github.com/ryanbugden/Anchor-Dropper)
+* [Adjust Anchors by Adobe Type Tools](https://github.com/adobe-type-tools/adjust-anchors-rf-ext)
+
 
 ### Building the `COMBINING_MARKS` group
 
