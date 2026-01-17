@@ -10,4 +10,4 @@ addToMenu:
   shortKey: ''
 html: false
 requiresVersionMajor: '4'
-requiresVersionMinor: 4b
+requiresVersionMinor: '4b'
